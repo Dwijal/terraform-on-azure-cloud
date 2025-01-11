@@ -5,12 +5,11 @@ description: Learn how to use multiple Terraform provider blocks on Azure Cloud
 
 # Multiple Provider Configurations
 
-## Step-01: Introduction
+## Introduction
 - Understand and Implement Multiple Provider Configurations
 
-## Step-02: How to define multiple provider configuration of same Provider?
-- Understand about default provider
-- Understand and define multiple provider configurations of same provider
+## How to define multiple provider configuration of same Provider?
+
 ```t
 # Provider-1 for EastUS (Default Provider)
 provider "azurerm" {
@@ -32,7 +31,7 @@ provider "azurerm" {
 }
 ```
 
-## Step-03: How to reference the non-default provider configuration in a resource?
+## How to reference the non-default provider configuration in a resource?
 ```t
 # Provider-2: Create a resource group in WestUS region - Uses "provider2-westus" provider
 resource "azurerm_resource_group" "myrg2" {
@@ -43,7 +42,7 @@ resource "azurerm_resource_group" "myrg2" {
 }
 ```
 
-## Step-04: Execute Terraform Commands
+## Execute Terraform Commands
 ```t
 # Initialize Terraform
 terraform init
@@ -61,17 +60,6 @@ terraform apply -auto-approve
 1. Verify the Resource Group created in EastUS region
 2. Verify the Resource Group created in WestUS region
 ```
-
-## Step-05: Clean-Up 
-```t
-# Destroy Terraform Resources
-terraform destroy -auto-approve
-
-# Delete Terraform Files
-rm -rf .terraform*
-rm -rf terraform.tfstate*
-```
-
 
 
 ## References
