@@ -3,32 +3,19 @@ title: Terraform Settings, Providers and Resource Blocks
 description: Learn Key blocks of Terraform like Settings, Providers and Resource Blocks
 ---
 
-## Step-01: Introduction
+## Introduction
 ### Terraform Block
-- Understand about Terraform Block and its importance
-- Understand how to handle version constraints for Terraform Version and Provider Version in Terraform Block
-### Provider Block
-- What are Terraform Providers?
-- What Providers Do?
-- Where do providers reside (Terraform Registry)?
-- How to use Providers?
-- What are Provider Badges?
 
-### Step-02: Understand about Terraform Settings Block
-- [Terraform Settings Block](https://www.terraform.io/docs/language/settings/index.html)
-- Required Terraform Version
-- Provider Requirements
-- Terraform backends
-- Experimental Language Features
-- Passing Metadata to Providers
-- Reference `sample-terraform-settings.tf` for additional understanding. 
+![image](https://github.com/user-attachments/assets/2787df83-0777-4aaa-89c9-27a380969da6)
 
-## Step-03: Create a simple terraform block and play with required_version
+
+
+## Simple terraform block with required_version
 - `required_version` focuses on underlying Terraform CLI installed on your desktop
 - If the running version of Terraform on your local desktop doesn't match the constraints specified in your terraform block, Terraform will produce an error and exit without taking any further actions.
 - By changing the versions try `terraform init` and observe whats happening
 ```t
-# Play with Terraform CLI Version (We installed 1.0.0 version)
+# Play with Terraform CLI Version **(We installed 1.0.0 version)**
   required_version = "~> 0.14.3" - Will fail
   required_version = "~> 0.14"   - Will fail  
   required_version = "= 0.14.4"  - Will fail
@@ -50,13 +37,13 @@ terraform init
 ```
 
 
-## Step-04: Terraform Providers
+## Terraform Providers
 - What are [Terraform Providers](https://www.terraform.io/docs/language/providers/configuration.html)?
 - What Providers Do?
 - Where do providers reside (Terraform Registry)?
 
 
-## Step-05: Provider Requirements
+## Provider Requirements
 - Define required providers in Terraform Block
 - Understand about three things about defining `required_providers` in terraform block
   - local names
@@ -76,7 +63,7 @@ terraform {
 ```
 
 
-## Step-06: Provider Block  
+## Provider Block  
 - Create a Provider Block for Azure Resource Management `azurerm`
 ```t
 # Provider Block
@@ -101,7 +88,7 @@ terraform validate
 terraform plan
 ```  
 
-## Step-07: Add Provider and play with Provider version
+## Add Provider and play with Provider version
 - `required_providers` block specifies all of the providers required by the current module, mapping each local provider name to a source address and a version constraint.
 
 ```t
@@ -125,30 +112,9 @@ resource "azurerm_resource_group" "myrg" {
 ```
 
 
-## Step-09: Execute Terraform commands 
-```t
-# Initialize Terraform
-terraform init
 
-# Validate Terraform Configuration files
-terraform validate
 
-# Execute Terraform Plan
-terraform plan
 
-# Create Resources using Terraform Apply
-terraform apply -auto-approve
-```  
-
-## Step-10: Clean-Up 
-```t
-# Destroy Terraform Resources
-terraform destroy -auto-approve
-
-# Delete Terraform Files
-rm -rf .terraform*
-rm -rf terraform.tfstate*
-```
 
 
 ## References
