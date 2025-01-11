@@ -3,7 +3,7 @@ title: Terraform Configuration Language Syntax
 description: Learn Terraform Configuration Language Syntax like Blocks, Arguments, Comments etc
 ---
 
-## Step-01: Introduction
+## Introduction
 - Understand Terraform Language Basics
 1. Understand Blocks
 2. Understand Arguments, Attributes & Meta-Arguments
@@ -11,7 +11,7 @@ description: Learn Terraform Configuration Language Syntax like Blocks, Argument
 4. Understand Comments
 
 
-## Step-02: Terraform Configuration Language Syntax
+## Terraform Configuration Language Syntax
 - Understand Blocks
 - Understand Arguments
 - Understand Identifiers
@@ -40,7 +40,7 @@ resource "azurerm_virtual_network" "myvnet" { # Resource BLOCK
 }
 ```
 
-## Step-03: Understand about Arguments, Attributes and Meta-Arguments.
+## Understand about Arguments, Attributes and Meta-Arguments.
 - Arguments can be `required` or `optional`
 - Attribues format looks like `resource_type.resource_name.attribute_name`
 - Meta-Arguments change a resource type's behavior (Example: count, for_each)
@@ -50,7 +50,7 @@ resource "azurerm_virtual_network" "myvnet" { # Resource BLOCK
 - [Resource: Azure Resource Group Attribute Reference](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/resource_group#attributes-reference)
 - [Resource: Meta-Arguments](https://www.terraform.io/docs/language/meta-arguments/depends_on.html)
 
-## Step-04: Understand about Terraform Top-Level Blocks
+## Understand about Terraform Top-Level Blocks
 - Discuss about Terraform Top-Level blocks
 1. Terraform Settings Block
 2. Provider Block
