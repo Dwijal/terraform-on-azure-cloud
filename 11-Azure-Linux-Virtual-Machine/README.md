@@ -3,7 +3,7 @@ title: Azure Linux VM using Terraform
 description: Create Azure Linux VM using Terraform
 ---
 
-## Step-00: Introduction
+## Resource Names
 - We are going to create following Azure Resources
 1. azurerm_public_ip
 2. azurerm_network_interface
@@ -35,6 +35,8 @@ ssh-keygen \
     -C "azureuser@myserver" \
     -f terraform-azure.pem 
 Important Note: If you give passphrase during generation, during everytime you login to VM, you also need to provide passphrase.
+
+Note: key strength specifies how tough it is to unlock the key. Higher is the value higher is the security.
 
 # List Files
 ls -lrt ssh-keys/
